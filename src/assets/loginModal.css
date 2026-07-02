@@ -1,0 +1,11 @@
+.modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #198754;
+}
+.btn-success {
+  background-color: #198754;
+  border: none;
+}
+.btn-success:hover {
+  background-color: #157347;
+}

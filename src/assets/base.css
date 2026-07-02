@@ -1,0 +1,46 @@
+/* Paleta y tipografía */
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-black: #181818;
+  --vt-c-indigo: #2c3e50;
+  --color-background: var(--vt-c-white);
+  --color-text: var(--vt-c-indigo);
+}
+
+
+
+/* Responsividad: buscador ocupa todo el ancho en pantallas pequeñas */
+/*En pantallas pequeñas (max-width: 992px) el buscador se expande a todo el ancho y los botones bajan si no hay espacio.*/
+@media (max-width: 992px) {
+  form[role="search"] {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+/* aca se agrego el modo oscuro usando media query para detectar la preferencia del usuario */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black);
+    --color-text: var(--vt-c-white);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+/* Estilos base para el cuerpo del documento */
+body {
+  color: var(--color-text);
+  background: linear-gradient(135deg, #fce4ec, #e3f2fd, #e8f5e9);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+

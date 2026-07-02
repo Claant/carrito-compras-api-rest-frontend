@@ -1,0 +1,57 @@
+/* -------------------------
+   Contenedor del gráfico: hacerlo más grande y prominente
+   ------------------------- */
+:root {
+  --chart-max-width-expanded: 1200px; /* ancho máximo ampliado */
+  --chart-default-height: 520px;      /* altura visual del contenedor */
+}
+
+/* Contenedor principal dentro de main/router-view */
+.admin-container.d-flex main.flex-grow-1 .chart-container,
+.admin-container.d-flex main.flex-grow-1 .chart-wrapper,
+.admin-container.d-flex main.flex-grow-1 .grafico {
+  width: 100% !important;
+  max-width: var(--chart-max-width-expanded) !important;
+  min-width: 320px !important;
+  height: var(--chart-default-height) !important;
+  min-height: 360px !important;
+  margin: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 12px !important;
+  box-sizing: border-box !important;
+  align-self: flex-start !important;
+  display: block !important;
+  background: transparent !important;
+}
+
+/* Canvas dentro del contenedor: ocupar todo el espacio disponible */
+.admin-container.d-flex main.flex-grow-1 .chart-container canvas,
+.admin-container.d-flex main.flex-grow-1 .chart-wrapper canvas,
+.admin-container.d-flex main.flex-grow-1 .grafico canvas,
+.admin-container.d-flex main.flex-grow-1 canvas {
+  width: 100% !important;
+  height: 100% !important;    /* forzar altura visual */
+  max-width: 100% !important;
+  display: block !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Si el gráfico está en un grid/flex, permitir que el contenedor crezca */
+.admin-container.d-flex main.flex-grow-1 .row,
+.admin-container.d-flex main.flex-grow-1 .d-flex {
+  align-items: flex-start !important;
+}
+
+/* Responsive: reducir altura en pantallas pequeñas para evitar overflow */
+@media (max-width: 992px) {
+  :root { --chart-max-width-expanded: 100%; --chart-default-height: 360px; }
+  .admin-container.d-flex main.flex-grow-1 .chart-container,
+  .admin-container.d-flex main.flex-grow-1 .chart-wrapper,
+  .admin-container.d-flex main.flex-grow-1 .grafico {
+    max-width: 100% !important;
+    height: var(--chart-default-height) !important;
+    min-height: 280px !important;
+  }
+}

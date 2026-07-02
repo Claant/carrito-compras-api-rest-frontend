@@ -1,0 +1,39 @@
+
+.footer-mejorado {
+  background-color: #0f1655; /* Fondo oscuro elegante */
+  font-family: 'Poppins', sans-serif; /* Tipografía moderna */
+}
+
+.footer-mejorado h5 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #f1c40f; /* Dorado suave para títulos */
+}
+
+.footer-mejorado a {
+  color: #dcdcdc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-mejorado a:hover {
+  color: #f39c12; /* Cambia de color al pasar el mouse */
+}
+
+.social-links a {
+  font-size: 1.6rem;
+  margin-right: 12px;
+  color: #dcdcdc;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #f1c40f;
+}
+
+.payment-icons i {
+  font-size: 1.8rem;
+  margin-right: 10px;
+  color: #f1f1f1;
+}
+

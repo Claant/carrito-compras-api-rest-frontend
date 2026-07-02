@@ -1,0 +1,8 @@
+.social-links a {
+  color: #6c757d;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+.social-links a:hover {
+  color: #ffc107; /* amarillo del título “Síguenos” */
+}

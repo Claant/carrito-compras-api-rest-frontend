@@ -1,0 +1,84 @@
+/* === Botón Categorías: idéntico a Mis compras (reposo: blanco con borde verde fino) === */
+.nav-item.dropdown > button.nav-link.dropdown-toggle.fw-bold.text-danger {
+  background-color: #fff;
+  border: 1px solid rgba(25,135,84,0.65); /* contorno fino y sutil */
+  color: rgba(25,135,84,0.95) !important; /* texto verde en reposo */
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+  white-space: nowrap;
+  transition: background-color 0.16s ease, color 0.16s ease, box-shadow 0.16s ease, transform 0.12s ease;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+/* Mantener caret con el mismo color que el texto */
+.nav-item.dropdown > button.nav-link.dropdown-toggle.fw-bold.text-danger::after {
+  color: rgba(25,135,84,0.85);
+  opacity: 0.95;
+  margin-left: 8px;
+}
+
+/* === Hover: igual que Mis compras (fondo verde, texto blanco) === */
+.nav-item.dropdown > button.nav-link.dropdown-toggle.fw-bold.text-danger:hover,
+.nav-item.dropdown > button.nav-link.dropdown-toggle.fw-bold.text-danger:active,
+.nav-item.dropdown > button.nav-link.dropdown-toggle.fw-bold.text-danger:focus {
+  background-color: #198754 !important;   /* verde sólido */
+  color: #fff !important;                 /* texto blanco */
+  border-color: #198754 !important;       /* borde coincide con fondo */
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(25,135,84,0.10);
+  outline: none;
+}
+
+/* === Dropdown: mantener items coherentes con el botón === */
+.nav-item.dropdown > .dropdown-menu {
+  background-color: #fff;
+  border: 1px solid #e6e9ee;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(15,23,42,0.06);
+  padding: 6px 0;
+  min-width: 220px;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  transform-origin: top center;
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  z-index: 1100;
+}
+.nav-item.dropdown > .dropdown-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Items: reposo con texto verde sutil, hover verde con texto blanco */
+.nav-item.dropdown > .dropdown-menu .dropdown-item {
+  color: rgba(25,135,84,0.9);
+  font-weight: 500;
+  padding: 9px 14px;
+  border-radius: 6px;
+  transition: background 0.14s ease, color 0.14s ease, transform 0.12s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-item.dropdown > .dropdown-menu .dropdown-item:hover,
+.nav-item.dropdown > .dropdown-menu .dropdown-item:focus {
+  background-color: #198754;
+  color: #fff;
+  transform: translateX(4px);
+}
+.nav-item.dropdown > .dropdown-menu .dropdown-item i {
+  color: rgba(25,135,84,0.9);
+  transition: color 0.12s ease, transform 0.12s ease;
+}
+.nav-item.dropdown > .dropdown-menu .dropdown-item:hover i,
+.nav-item.dropdown > .dropdown-menu .dropdown-item:focus i {
+  color: #fff;
+  transform: scale(1.06);
+}
