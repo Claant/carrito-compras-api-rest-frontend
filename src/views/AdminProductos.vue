@@ -160,7 +160,7 @@ async function fetchProducts() {
     const res = await api.get('/api/productos');
     console.log('GET /api/productos response:', res);
 
-    const origin = import.meta.env.VITE_API_URL || window.location.origin;
+    const origin = window.location.origin;
     products.value = (res.data || []).map(p => {
       const nombre = p.nombre ?? p.name ?? '';
       const descripcion = p.descripcion ?? p.description ?? '';
