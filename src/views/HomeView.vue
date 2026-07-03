@@ -80,7 +80,7 @@ onMounted(async () => {
   try {
     uiStore.setLoading(true);
     const api = import.meta.env.VITE_API_URL;   // usar variable de entorno
-    const { data } = await axios.get("${api}/api/productos");
+    const { data } = await axios.get(`${api}/api/productos`);
     // Aplicamos descuentos a los productos destacados
     productos.value = aplicarDescuentos(data);
     console.log("Productos destacados:", productos.value);

@@ -41,13 +41,14 @@ export default {
 
     const cargarReporte = async () => {
       let url = "";
-      switch (tipoReporte.value) {
-        case "diaria": url = "${api}/api/reportes/ventas-diarias"; break;
-        case "semanal": url = "${api}/api/reportes/ventas-semanales"; break;
-        case "mensual": url = "${api}/api/reportes/ventas-mensuales"; break;
-        case "anual": url = "${api}/api/reportes/ventas-anuales"; break;
-        case "producto": url = "${api}/api/reportes/ventas-productos"; break;
-      }
+  switch (tipoReporte.value) {
+  case "diaria": url = `${api}/api/reportes/ventas-diarias`; break;
+  case "semanal": url = `${api}/api/reportes/ventas-semanales`; break;
+  case "mensual": url = `${api}/api/reportes/ventas-mensuales`; break;
+  case "anual": url = `${api}/api/reportes/ventas-anuales`; break;
+  case "producto": url = `${api}/api/reportes/ventas-productos`; break;
+}
+
 
       const res = await fetch(url);
       const data = await res.json();
